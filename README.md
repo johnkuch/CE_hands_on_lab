@@ -3,4 +3,4 @@
 
 Welcome to the hands on lab for CSA CE.
 
-1) [Installation](lession/installation.md)
+1) [Installation](lesson/installation.md)
