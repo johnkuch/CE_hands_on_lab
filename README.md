@@ -5,6 +5,6 @@ Welcome to the hands on lab for CSA CE.
 
 1) [Installation](lesson/installation.md)
 2) [What is a stream processor?](lesson/what_is_a_stream_processor.md)
-2) [Configuring Source]
+2) [Configuring Source](lesson/configure_source.md)
 3) [Configuring a Sink]
 4) [Creating a stream processing job using SQL]
