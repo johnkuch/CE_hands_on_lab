@@ -1,4 +1,5 @@
 -- Slowloris attack
+INSERT INTO slowloris_attacks
 SELECT
     'true' as alert,
     'attack from '||source_ip||':'||port as message,
