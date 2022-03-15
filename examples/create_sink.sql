@@ -1,4 +1,4 @@
-CREATE TABLE  `output` (
+CREATE TABLE  `output_table` (
   `window_start` TIMESTAMP(3) NOT NULL,
   `window_end` TIMESTAMP(3) NOT NULL,
   `order_status` VARCHAR(2147483647),
