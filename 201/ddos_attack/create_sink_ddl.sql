@@ -7,7 +7,7 @@ CREATE TABLE  `slowloris_attacks` (
   `window_end` TIMESTAMP(3) NOT NULL,
   `count_connection_reset` BIGINT NOT NULL
 ) WITH (
-  'connector' = 'kafka:  Local Kafka',      -- Specify what connector to use, for Kafka it must use 'kafka'.
+  'connector' = 'kafka:  Local Kafka',      -- Specify what connector to use, for Kafka on local Docker it must use 'kafka: Local Kafka'.
   'format' = 'json',                        -- Data format
   'topic' = 'slowloris'
 );
