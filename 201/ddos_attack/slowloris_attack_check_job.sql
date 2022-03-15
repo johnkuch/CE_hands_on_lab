@@ -2,15 +2,15 @@
 INSERT INTO slowloris_attacks
 SELECT
     'true' as alert,
-    'attack from '||source_ip||':'||port as message,
+    'attack from '||source_ip||':'||CAST(dest_port as varchar) as message,
     source_ip,
     window_start,
     window_end,
     count(*) as count_connection_reset
-FROM 
+FROM
     TABLE (
         TUMBLE(TABLE ip, DESCRIPTOR(ts), INTERVAL '10' SECONDS)
     )
 WHERE tcp_flags_ack = 1
 AND tcp_flags_reset = 1
-GROUP BY source_ip, window_start, window_end;
+GROUP BY source_ip, dest_port, window_start, window_end;
